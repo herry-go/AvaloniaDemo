@@ -6,6 +6,7 @@ using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Microsoft.Extensions.DependencyInjection;
+using ShowMeTheXaml;
 using SukiDemo.Common;
 using SukiDemo.Features.ControlsLibrary;
 using SukiDemo.Features.ControlsLibrary.Colors;
@@ -65,6 +66,8 @@ public partial class App : Application
             var provider = ConfigureServices(services);
 
             DataTemplates.Add(new Common.ViewLocator(views));
+            
+            XamlDisplayInternalData.RegisterXamlDisplayData();
 
             desktop.MainWindow = views.CreateView<SukiUIDemoViewModel>(provider) as Window;
         }
