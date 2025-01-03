@@ -1,0 +1,22 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AvaloniaDemo.App"
+             xmlns:local="using:AvaloniaDemo"
+             xmlns:templateHelper="clr-namespace:AvaloniaDemo"
+             xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
+             xmlns:dialogHostAvalonia="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <templateHelper:ViewLocator/>
+    </Application.DataTemplates>
+             
+    <Application.Styles>
+        <themes:MaterialTheme BaseTheme="Dark" PrimaryColor="Purple" SecondaryColor="Lime" />
+        <dialogHostAvalonia:DialogHostStyles />
+    </Application.Styles> 
+             
+
+             
+</Application>
