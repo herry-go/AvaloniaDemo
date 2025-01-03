@@ -1,0 +1,125 @@
+is_global = true
+build_property.AvaloniaNameGeneratorIsEnabled = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassName
+build_property.AvaloniaNameGeneratorAttachDevTools = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SukiDemo
+build_property.ProjectDir = /home/herry/workspace/AvaloniaDemo/SukiDemo/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/ButtonsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/CardsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/CollectionsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/Colors/ColorsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/ContextMenusView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/Dialogs/DialogsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/Dialogs/DialogWindowDemo.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/Dialogs/VmDialogView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/DockControls/DocumentText.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/DockControls/ErrorList.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/DockControls/propertiesview.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/DockControls/SolutionExplore.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/DockView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/ExpanderView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/IconsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/InfoBarView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/MiscView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/ProgressView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/PropertyGridView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/StackPage/RecursiveView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/StackPage/StackPageView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/TabControl/TabControlView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/TextView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/Toasts/ToastsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/Toasts/ToastWindowDemo.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/ControlsLibrary/TogglesView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/CustomTheme/CustomThemeDialogView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/Dashboard/DashboardView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/Dashboard/DialogView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/Playground/PlaygroundView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/Splash/SplashView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Features/Theming/ThemingView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/herry/workspace/AvaloniaDemo/SukiDemo/Views/SukiUIDemoView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

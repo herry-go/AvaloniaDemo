@@ -1,0 +1,47 @@
+<UserControl x:Class="SukiDemo.Features.ControlsLibrary.ExpanderView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:suki="https://github.com/kikipoulet/SukiUI"
+             xmlns:controlsLibrary="clr-namespace:SukiDemo.Features.ControlsLibrary"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             x:DataType="controlsLibrary:ExpanderViewModel"
+             mc:Ignorable="d">
+    <Grid RowDefinitions="Auto, *">
+        <suki:GlassCard Classes="HeaderCard">
+            <suki:GroupBox Header="Expander">
+                <StackPanel Classes="HeaderContent">
+                    <TextBlock>
+                        Expanders have styles for all ExpandDirections, using custom animation behaviour and controls internally to correctly animate showing/hiding any size content.
+                    </TextBlock>
+                </StackPanel>
+            </suki:GroupBox>
+        </suki:GlassCard>
+        <ScrollViewer Grid.Row="1">
+            <WrapPanel Classes="PageContainer">
+                <suki:GlassCard>
+                    <Expander ExpandDirection="Down" Header="Down Expander">
+                        <TextBlock>Some Down Content</TextBlock>
+                    </Expander>
+                </suki:GlassCard>
+                <suki:GlassCard>
+                    <Expander ExpandDirection="Up" Header="Up Expander">
+                        <TextBlock>Some Up Content</TextBlock>
+                    </Expander>
+                </suki:GlassCard>
+                <suki:GlassCard>
+                    <Expander ExpandDirection="Right" Header="Right Expander">
+                        <TextBlock>Some Right Content</TextBlock>
+                    </Expander>
+                </suki:GlassCard>
+                <suki:GlassCard>
+                    <Expander ExpandDirection="Left" Header="Left Expander">
+                        <TextBlock>Some Left Content</TextBlock>
+                    </Expander>
+                </suki:GlassCard>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
