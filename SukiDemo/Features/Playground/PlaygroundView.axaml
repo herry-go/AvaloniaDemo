@@ -1,0 +1,239 @@
+﻿<UserControl x:Class="SukiDemo.Features.Playground.PlaygroundView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             xmlns:avaloniaEdit="https://github.com/avaloniaui/avaloniaedit"
+             xmlns:converters="clr-namespace:SukiDemo.Converters"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:playground="clr-namespace:SukiDemo.Features.Playground"
+             xmlns:controls="clr-namespace:SukiDemo.Controls"
+             xmlns:suki="https://github.com/kikipoulet/SukiUI"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             x:DataType="playground:PlaygroundViewModel"
+             mc:Ignorable="d">
+    <suki:SukiStackPage>
+        <suki:SukiStackPage.Content>
+
+            <SplitView Name="Playground"
+                       CompactPaneLength="50"
+                       DisplayMode="CompactInline"
+                       IsPaneOpen="False"
+                       OpenPaneLength="250">
+                <SplitView.Pane>
+                    <Grid>
+
+                        <DockPanel Name="TabControls"
+                                   IsHitTestVisible="False"
+                                   Opacity="0">
+                            <Button Margin="0,25"
+                                    Padding="0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    Classes="Basic"
+                                    Click="ClosePane"
+                                    Command="{Binding TogglePaneDelayCommand}"
+                                    DockPanel.Dock="Top"
+                                    IsHitTestVisible="True"
+                                    Opacity="1">
+                                <StackPanel>
+                                    <TextBlock HorizontalAlignment="Center"
+                                               FontSize="12"
+                                               Foreground="{DynamicResource SukiLowText}"
+                                               Text="Close" />
+                                    <avalonia:MaterialIcon Foreground="{DynamicResource SukiLowText}" Kind="ChevronLeft" />
+                                </StackPanel>
+                            </Button>
+                            <TabControl Margin="0,20,0,12" TabStripPlacement="Left">
+
+                                <TabItem Header="Buttons">
+                                    <ScrollViewer Classes="Stack">
+                                        <ItemsControl suki:ItemsControlExtensions.AnimatedScroll="True" ItemsSource="{Binding ButtonsElements}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <suki:GlassCard MinHeight="100"
+                                                                    Margin="0,8"
+                                                                    CornerRadius="10"
+                                                                    IsInteractive="True"
+                                                                    PointerPressed="AddNewControls"
+                                                                    Tag="{Binding}">
+                                                        <Viewbox StretchDirection="DownOnly">
+                                                            <ContentControl HorizontalAlignment="Center"
+                                                                            VerticalAlignment="Center"
+                                                                            Content="{Binding ., Converter={x:Static converters:StringToControlConverter.Instance}}"
+                                                                            IsHitTestVisible="False" />
+                                                        </Viewbox>
+                                                    </suki:GlassCard>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </TabItem>
+                                <TabItem Header="Layout">
+                                    <ScrollViewer Classes="Stack">
+                                        <ItemsControl suki:ItemsControlExtensions.AnimatedScroll="True" ItemsSource="{Binding LayoutElements}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <suki:GlassCard MinHeight="100"
+                                                                    Margin="0,8"
+                                                                    CornerRadius="10"
+                                                                    IsInteractive="True"
+                                                                    PointerPressed="AddNewControls"
+                                                                    Tag="{Binding}">
+                                                        <Viewbox StretchDirection="DownOnly">
+                                                            <ContentControl HorizontalAlignment="Center"
+                                                                            VerticalAlignment="Center"
+                                                                            Content="{Binding ., Converter={x:Static converters:StringToControlConverter.Instance}}"
+                                                                            IsHitTestVisible="False" />
+                                                        </Viewbox>
+                                                    </suki:GlassCard>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </TabItem>
+                                <TabItem Header="Input">
+                                    <ScrollViewer Classes="Stack">
+                                        <ItemsControl suki:ItemsControlExtensions.AnimatedScroll="True" ItemsSource="{Binding InputsElements}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <suki:GlassCard MinHeight="100"
+                                                                    Margin="0,8"
+                                                                    CornerRadius="10"
+                                                                    IsInteractive="True"
+                                                                    PointerPressed="AddNewControls"
+                                                                    Tag="{Binding}">
+                                                        <Viewbox StretchDirection="DownOnly">
+                                                            <ContentControl HorizontalAlignment="Center"
+                                                                            VerticalAlignment="Center"
+                                                                            Content="{Binding ., Converter={x:Static converters:StringToControlConverter.Instance}}"
+                                                                            IsHitTestVisible="False" />
+                                                        </Viewbox>
+                                                    </suki:GlassCard>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </TabItem>
+                                <TabItem Header="Progress">
+                                    <ScrollViewer Classes="Stack">
+                                        <ItemsControl suki:ItemsControlExtensions.AnimatedScroll="True" ItemsSource="{Binding ProgressElements}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <suki:GlassCard MinHeight="100"
+                                                                    Margin="0,8"
+                                                                    CornerRadius="10"
+                                                                    IsInteractive="True"
+                                                                    PointerPressed="AddNewControls"
+                                                                    Tag="{Binding}">
+                                                        <Viewbox StretchDirection="DownOnly">
+                                                            <ContentControl HorizontalAlignment="Center"
+                                                                            VerticalAlignment="Center"
+                                                                            Content="{Binding ., Converter={x:Static converters:StringToControlConverter.Instance}}"
+                                                                            IsHitTestVisible="False" />
+                                                        </Viewbox>
+                                                    </suki:GlassCard>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </TabItem>
+                                <TabItem Header="Lists">
+                                    <ScrollViewer Classes="Stack">
+                                        <ItemsControl suki:ItemsControlExtensions.AnimatedScroll="True" ItemsSource="{Binding ListsElements}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <suki:GlassCard MinHeight="100"
+                                                                    Margin="0,8"
+                                                                    CornerRadius="10"
+                                                                    IsInteractive="True"
+                                                                    PointerPressed="AddNewControls"
+                                                                    Tag="{Binding}">
+                                                        <Viewbox StretchDirection="DownOnly">
+                                                            <ContentControl HorizontalAlignment="Center"
+                                                                            VerticalAlignment="Center"
+                                                                            Content="{Binding ., Converter={x:Static converters:StringToControlConverter.Instance}}"
+                                                                            IsHitTestVisible="False" />
+                                                        </Viewbox>
+                                                    </suki:GlassCard>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </TabItem>
+                            </TabControl>
+                        </DockPanel>
+
+                        <Button Name="OpenPaneButton"
+                                Margin="0,25"
+                                Padding="0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Classes="Basic"
+                                Click="OpenPane"
+                                Command="{Binding TogglePaneDelayCommand}"
+                                IsHitTestVisible="True"
+                                Opacity="1">
+                            <StackPanel>
+                                <TextBlock HorizontalAlignment="Center"
+                                           FontSize="12"
+                                           Foreground="{DynamicResource SukiLowText}"
+                                           Text="Add" />
+                                <TextBlock HorizontalAlignment="Center"
+                                           FontSize="12"
+                                           Foreground="{DynamicResource SukiLowText}"
+                                           Text="Controls" />
+                                <avalonia:MaterialIcon Foreground="{DynamicResource SukiLowText}" Kind="ChevronRight" />
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </SplitView.Pane>
+                <Grid ColumnDefinitions="*, 4, *">
+                    <suki:GlassCard Margin="20">
+                        <Grid RowDefinitions="*, Auto">
+                            <controls:CodeEditor Name="Editor" Language="xml" />
+                            <Button Name="RenderButton"
+                                    Grid.Row="0"
+                                    Width="120"
+                                    Height="40"
+                                    Margin="30"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Bottom"
+                                    Classes="Flat Round"
+                                    Click="OnRenderClicked"
+                                    CornerRadius="9">
+                                <StackPanel Orientation="Horizontal">
+                                    <avalonia:MaterialIcon Width="14"
+                                                           Height="14"
+                                                           Margin="0,0,10,0"
+                                                           Kind="Brush" />
+                                    <TextBlock FontSize="16">Render</TextBlock>
+
+                                </StackPanel>
+                            </Button>
+                            <!--  <Button Name="ClearButton"
+                                            Grid.Row="0"
+                                            Grid.Column="2"
+                                            Classes="Flat Round"
+                                            Click="OnClearClicked">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock>Clear</TextBlock>
+                                            <avalonia:MaterialIcon Kind="Trash" />
+                                        </StackPanel>
+                                    </Button>-->
+                        </Grid>
+                    </suki:GlassCard>
+                    <GridSplitter Grid.Row="0"
+                                  Grid.Column="2"
+                                  Background="Transparent"
+                                  ResizeDirection="Columns" />
+                    <suki:GlassCard Name="GlassExample"
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    Margin="20" />
+                </Grid>
+            </SplitView>
+        </suki:SukiStackPage.Content>
+    </suki:SukiStackPage>
+</UserControl>

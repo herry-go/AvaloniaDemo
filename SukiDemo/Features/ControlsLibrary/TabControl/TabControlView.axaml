@@ -1,0 +1,81 @@
+<UserControl x:Class="SukiDemo.Features.ControlsLibrary.TabControl.TabControlView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:suki="https://github.com/kikipoulet/SukiUI"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tabControl="clr-namespace:SukiDemo.Features.ControlsLibrary.TabControl"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             x:DataType="tabControl:TabControlViewModel"
+             mc:Ignorable="d">
+    <UserControl.Styles>
+        <Style Selector="TabControl">
+            <Setter Property="ItemsSource" Value="{Binding Tabs}" />
+            <Setter Property="ItemTemplate">
+                <DataTemplate x:DataType="tabControl:TabViewModel">
+                    <TextBlock Text="{Binding Header}" />
+                </DataTemplate>
+            </Setter>
+            <Setter Property="ContentTemplate">
+                <DataTemplate x:DataType="tabControl:TabViewModel">
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Classes="h3"
+                               Text="{Binding Content}" />
+                </DataTemplate>
+            </Setter>
+            <Style x:DataType="tabControl:TabViewModel" Selector="^ TabItem">
+                <Setter Property="IsEnabled" Value="{Binding IsEnabled}" />
+            </Style>
+        </Style>
+    </UserControl.Styles>
+    <Grid RowDefinitions="Auto,*">
+        <suki:GlassCard Classes="HeaderCard">
+            <suki:GroupBox Header="Tab Controls">
+                <StackPanel Classes="HeaderContent">
+                    <TextBlock>
+                        Styles are available for all TabStripPlacements.
+                    </TextBlock>
+                    <TextBlock>
+                        Tab 6 is disabled for demonstration purposes.
+                    </TextBlock>
+                </StackPanel>
+            </suki:GroupBox>
+        </suki:GlassCard>
+        <ScrollViewer Grid.Row="1">
+            <WrapPanel Classes="PageContainer">
+                <suki:GlassCard>
+                    <suki:GroupBox Header="Standard Tab Control">
+                        <TabControl />
+                    </suki:GroupBox>
+                </suki:GlassCard>
+                <suki:GlassCard>
+                    <suki:GroupBox Header="Left Tab Control">
+                        <TabControl TabStripPlacement="Left" />
+                    </suki:GroupBox>
+                </suki:GlassCard>
+                <suki:GlassCard>
+                    <suki:GroupBox Header="Right Tab Control">
+                        <TabControl TabStripPlacement="Right" />
+                    </suki:GroupBox>
+                </suki:GlassCard>
+                <suki:GlassCard>
+                    <suki:GroupBox Header="Bottom Tab Control">
+                        <TabControl TabStripPlacement="Bottom" />
+                    </suki:GroupBox>
+                </suki:GlassCard>
+                <suki:GlassCard>
+                    <suki:GroupBox Header="Horizontal Left Tab Control">
+                        <TabControl Classes="HorizontalTabs" TabStripPlacement="Left" />
+                    </suki:GroupBox>
+                </suki:GlassCard>
+                <suki:GlassCard>
+                    <suki:GroupBox Header="Horizontal Right Tab Control">
+                        <TabControl Classes="HorizontalTabs" TabStripPlacement="Right" />
+                    </suki:GroupBox>
+                </suki:GlassCard>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
